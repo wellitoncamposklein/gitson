@@ -1,0 +1,49 @@
+Verificando log
+
+Já vimos o comando git log e sabemos que ele lista os commits efetuados. Neste módulo, ensinaremos um pouco mais sobre este comando e como trabalharem com ele.
+
+O git log é uma ferramenta, extremamente, importante e poderosa para utilizarem.
+
+Quando rodamos um git log, conseguimos ver os logs de todos os commits, por ordem decrescente.
+
+O grande ponto é que, vocês devem dominar este comando. Fiquem tranquilos, não estamos pedindo para que vocês decorem todas as opções que este comando oferece, anotar, algumas delas, ajudaria bastante.
+
+A primeira opção que mostraremos é a seguinte:
+
+$ git log -p
+
+Este comando, além de mostrar os logs, mostrará a alteração que foi feita em cada arquivo comitado. Costumamos chamar estas alterações de diferenças entre o arquivo, antes do commit e depois do commit.
+
+Este comando, ao mesmo tempo que é muito bom, pode acabar se tornando chato, porque vocês podem não querer ver todos os logs e alterações. Para isso, vocês tem a opção de rodar o seguinte comando:
+
+$ git log -p -2
+
+Neste caso, estamos limitando o número de resultados que o comando mostrará. Como passamos -2, como parâmetro, teremos apenas 2 resultados listados. Este comando é muito utilizado quando queremos saber o que foi alterado no, último ou nos últimos, commits do projeto e esta é uma forma rápida de se fazer isso.
+
+Outro comando que vocês podem utilizar é o stat:
+
+$ git log --stat
+
+Este comando mostra o git log, mas com estatística de todos os commits, dizendo qual arquivo entrou e qual saiu ou qual linha entrou e qual linha saiu.
+
+Vocês podem querer deixar a listagem de logs mais enxuta, removendo alguns dados que poluem o seu terminal. Para isso rodem o seguinte comando:
+
+$ git log --pretty=oneline
+
+Com este comando, teremos todos os logs de uma forma mais amigável, sendo apresentado um por linha.
+
+Observem que ele mostra, apenas, o hash e o comentário.
+
+Existe outro tipo de comando, utilizando o pretty.
+
+$ git log --pretty=format:"%h - %an, %ar : %s"
+
+Observem que esta, é uma forma simplificada de mostrar os logs, porém com mais informações.
+
+Lembrando que vocês não devem decorar todos estes commits, basta saberem que existem estas opções de visualizações e com o tempo vocês gravarão os comandos mais utilizados. Temos outro comando, muito útil, para quando precisamos do histórico de commits. Suponham que precisem saber quais foram os commits dos dois últimos dias.
+
+$ git log --since=2.days ou $ git log --since=2.weeks, caso queiram saber as duas últimas semanas.
+
+Gostaríamos de dizer que existem muitas outras opções para o comando git log. Estes, são os mais utilizados.
+
+Como já falamos, não tentem decorar, mas pratiquem muito e deixem alguns comandos, principais, anotados para que possam relembrar, até que estes comandos se tornem familiares a vocês.
